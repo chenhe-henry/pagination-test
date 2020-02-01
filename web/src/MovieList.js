@@ -15,7 +15,7 @@ class MovieList extends Component {
       this.setState({
         count: result.data.count,
         offset: newOffset,
-        api/: result.data.rows
+        movies: result.data.rows
       });
     });
   };
