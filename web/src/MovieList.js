@@ -11,11 +11,11 @@ class MovieList extends Component {
   handlePrevious = e => {
     e.preventDefault();
     const newOffset = Math.max(0, this.state.offset - 25);
-    Axios.get("/movies", { params: { offset: newOffset } }).then(result => {
+    Axios.get("/api/movies", { params: { offset: newOffset } }).then(result => {
       this.setState({
         count: result.data.count,
         offset: newOffset,
-        movies: result.data.rows
+        api/: result.data.rows
       });
     });
   };
@@ -23,7 +23,7 @@ class MovieList extends Component {
   handleNext = e => {
     e.preventDefault();
     const newOffset = Math.min(this.state.count, this.state.offset + 25);
-    Axios.get("/movies", { params: { offset: newOffset } }).then(result => {
+    Axios.get("/api/movies", { params: { offset: newOffset } }).then(result => {
       this.setState({
         count: result.data.count,
         offset: newOffset,
