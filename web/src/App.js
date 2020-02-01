@@ -21,6 +21,7 @@ export default function App() {
           <Route exact path="/">
             <h2>Welcome to the Movie app!</h2>
             <p>This is a wonderful app</p>
+            <p>TEST</p>
           </Route>
         </Switch>
       </div>
